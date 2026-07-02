@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Confirmed — FORGE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0A0A0B;
+    --forge-black: #141210;
+    --molten-gold: #C8841E;
+    --ember: #E8A33D;
+    --gold-deep: #9A6314;
+    --ash: #8A8580;
+    --bone: #F4F0E8;
+    --bone-dim: #C9C3B6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    background: var(--void);
+    color: var(--bone);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    background: radial-gradient(ellipse at 50% 30%, rgba(200,132,30,0.08), transparent 60%), var(--void);
+  }
+  .card {
+    max-width: 460px;
+    width: 100%;
+  }
+  .mark {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(200,132,30,0.06);
+  }
+  .mark svg { width: 32px; height: 32px; }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--bone-dim);
+    margin-bottom: 12px;
+  }
+  .sub {
+    font-size: 0.92rem;
+    color: var(--ash);
+    margin-bottom: 40px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--molten-gold);
+    color: var(--void);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+  }
+  .btn:hover { background: var(--ember); }
+  .signature {
+    margin-top: 48px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--gold-deep);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#C8841E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6 9 17l-5-5"/>
+      </svg>
+    </div>
+    <h1>Your email is confirmed</h1>
+    <p>You are ready to begin. Open the FORGE app and sign in with your new account.</p>
+    <p class="sub">If the app does not open automatically, launch it from your home screen.</p>
+    <a class="btn" href="forgeai://auth/callback">Open FORGE</a>
+    <div class="signature">The man you want to be is built, not born.</div>
+  </div>
+  <script>
+    // Attempt to deep-link into the app automatically on mobile.
+    setTimeout(function () {
+      window.location.href = 'forgeai://auth/callback';
+    }, 800);
+  </script>
+</body>
+</html>
