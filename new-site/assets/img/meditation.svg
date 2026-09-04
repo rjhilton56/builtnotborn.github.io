@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of a personalised meditation being generated: a molten waveform built from the day's own words">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f0d0b"/><stop offset="1" stop-color="#0A0A0B"/>
+    </linearGradient>
+    <linearGradient id="mgold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9A6314" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#E8A33D"/>
+      <stop offset="1" stop-color="#9A6314" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="mhalo" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#C8841E" stop-opacity="0.18"/><stop offset="1" stop-color="#C8841E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#mbg)"/>
+  <rect width="800" height="600" fill="url(#mhalo)"/>
+  <text x="400" y="90" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="6" fill="#C8841E">TONIGHT'S MEDITATION</text>
+  <text x="400" y="130" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#F4F0E8">Generated for the day you actually had</text>
+  <!-- waveform -->
+  <g transform="translate(0 300)">
+    <path d="M60 0 q20 -34 40 0 q20 34 40 0 q20 -70 40 0 q20 70 40 0 q20 -46 40 0 q20 46 40 0 q20 -96 40 0 q20 96 40 0 q20 -58 40 0 q20 58 40 0 q20 -80 40 0 q20 80 40 0 q20 -40 40 0 q20 40 40 0 q20 -66 40 0 q20 66 40 0 q20 -28 40 0 q20 28 40 0"
+      fill="none" stroke="url(#mgold)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="0" x2="740" y2="0" stroke="#C8841E" stroke-opacity="0.18"/>
+    <circle cx="400" cy="0" r="7" fill="#E8A33D"/>
+    <circle cx="400" cy="0" r="14" fill="none" stroke="#E8A33D" stroke-opacity="0.4"/>
+  </g>
+  <!-- input chips: the day's raw material -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2">
+    <g transform="translate(180 420)">
+      <rect width="130" height="34" rx="17" fill="none" stroke="#C8841E" stroke-opacity="0.5"/>
+      <text x="65" y="22" text-anchor="middle" fill="#C9C3B6">MOOD · 6/10</text>
+    </g>
+    <g transform="translate(335 420)">
+      <rect width="130" height="34" rx="17" fill="none" stroke="#C8841E" stroke-opacity="0.5"/>
+      <text x="65" y="22" text-anchor="middle" fill="#C9C3B6">"PRESSURE"</text>
+    </g>
+    <g transform="translate(490 420)">
+      <rect width="130" height="34" rx="17" fill="none" stroke="#C8841E" stroke-opacity="0.5"/>
+      <text x="65" y="22" text-anchor="middle" fill="#C9C3B6">ENERGY · LOW</text>
+    </g>
+  </g>
+  <text x="400" y="510" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="5" fill="#8A8580">VOICED &amp; PLAYED · NO STOCK LIBRARY</text>
+  <g fill="#E8A33D">
+    <circle cx="120" cy="200" r="1.7" opacity="0.55"/><circle cx="690" cy="180" r="2" opacity="0.5"/>
+    <circle cx="640" cy="520" r="1.5" opacity="0.45"/><circle cx="150" cy="540" r="1.9" opacity="0.5"/>
+  </g>
+</svg>

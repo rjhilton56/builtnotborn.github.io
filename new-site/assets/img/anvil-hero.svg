@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="The FORGE anvil, dark stone laced with molten gold">
+  <defs>
+    <radialGradient id="afloor" cx="0.5" cy="1" r="0.7">
+      <stop offset="0" stop-color="#C8841E" stop-opacity="0.2"/><stop offset="1" stop-color="#C8841E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="abody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#221e1a"/><stop offset="1" stop-color="#0d0c0b"/>
+    </linearGradient>
+    <linearGradient id="avein" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9A6314"/><stop offset="0.5" stop-color="#F7E3B8"/><stop offset="1" stop-color="#9A6314"/>
+    </linearGradient>
+    <radialGradient id="atop" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#E8A33D" stop-opacity="0.35"/><stop offset="1" stop-color="#E8A33D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#070707"/>
+  <ellipse cx="600" cy="700" rx="420" ry="120" fill="url(#afloor)"/>
+  <!-- anvil silhouette -->
+  <g>
+    <path d="M330 330 L900 330 Q930 330 926 356 L912 392 Q850 420 780 428 L760 470 L790 560 L820 588 L820 620 L380 620 L380 588 L410 560 L440 470 L420 430 Q330 424 286 380 Q262 356 276 340 Q290 330 330 330 Z"
+      fill="url(#abody)" stroke="#C8841E" stroke-opacity="0.35" stroke-width="2"/>
+    <rect x="352" y="620" width="496" height="34" rx="6" fill="#0d0c0b" stroke="#C8841E" stroke-opacity="0.25"/>
+    <!-- molten veins -->
+    <g fill="none" stroke="url(#avein)" stroke-linecap="round">
+      <path d="M470 340 q30 40 12 86 q-14 40 16 84" stroke-width="2.6" opacity="0.9"/>
+      <path d="M600 336 q-18 52 8 96 q22 40 -6 92" stroke-width="2" opacity="0.75"/>
+      <path d="M720 340 q24 44 2 90 q-16 38 14 88" stroke-width="2.8" opacity="0.85"/>
+      <path d="M540 470 q40 20 90 8" stroke-width="1.6" opacity="0.55"/>
+    </g>
+    <rect x="330" y="330" width="596" height="8" fill="url(#atop)"/>
+  </g>
+  <!-- rising sparks -->
+  <g fill="#E8A33D">
+    <circle cx="500" cy="270" r="2.4" opacity="0.8"/><circle cx="560" cy="220" r="1.6" opacity="0.55"/>
+    <circle cx="660" cy="250" r="2" opacity="0.7"/><circle cx="730" cy="200" r="1.4" opacity="0.5"/>
+    <circle cx="610" cy="170" r="1.8" opacity="0.45"/><circle cx="440" cy="210" r="1.5" opacity="0.5"/>
+    <circle cx="780" cy="280" r="2.2" opacity="0.65"/>
+  </g>
+</svg>

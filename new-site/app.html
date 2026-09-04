@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FORGE App · AI Journal App for Men | Built Not Born</title>
+<meta name="description" content="FORGE is an AI journal app for men. Type your daily check-in and get coached back from your own words — AI reflections, guided breathwork, and meditation generated for the day you actually had. Pre-launch on iOS: join early access." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="canonical" href="https://www.builtnotborn.uk/app.html" />
+<meta property="og:site_name" content="Built Not Born" />
+<meta property="og:title" content="FORGE App · AI Journal App for Men" />
+<meta property="og:description" content="Write. Reflect. Rebuild. An AI coach that answers from your own words, breathwork built in, and meditation generated for the day you actually had. Pre-launch on iOS." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.builtnotborn.uk/app.html" />
+<!-- TODO: real 1200x630 PNG exports still to be supplied for assets/img/og/ -->
+<meta property="og:image" content="https://www.builtnotborn.uk/assets/img/og/og-app.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="A handwritten journal entry becoming an AI coaching reflection" />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FORGE App · AI Journal App for Men" />
+<meta name="twitter:description" content="An AI coach that answers from your own words. Breathwork built in. Meditation generated for your actual day. Pre-launch on iOS." />
+<meta name="twitter:image" content="https://www.builtnotborn.uk/assets/img/og/og-app.png" />
+<!-- TODO: £49.99/year was unverified and has been removed from copy and structured data — confirm the annual price and restore it here, in the FAQ and in the CTA panel -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"SoftwareApplication","@id":"https://www.builtnotborn.uk/app.html#app","name":"FORGE","operatingSystem":"iOS","applicationCategory":"HealthApplication","description":"An AI journal app for men built around a daily check-in. It writes a personal AI reflection from your own words, includes guided breathwork, and generates a meditation for the day you actually had. Pre-launch: pending final device testing before App Store release.","url":"https://www.builtnotborn.uk/app.html","image":"https://www.builtnotborn.uk/assets/img/og/og-app.png","publisher":{"@type":"Organization","@id":"https://www.builtnotborn.uk/#org","name":"Built Not Born Ltd","url":"https://www.builtnotborn.uk/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"GBP","availability":"https://schema.org/PreOrder","description":"Free to try at launch, then £7.99/month. Annual pricing announced at launch."}},
+{"@type":"FAQPage","@id":"https://www.builtnotborn.uk/app.html#faq","mainEntity":[
+{"@type":"Question","name":"What is the FORGE app?","acceptedAnswer":{"@type":"Answer","text":"FORGE is a self-development app for men built around a daily check-in. It writes a personal AI reflection from your own words, includes guided breathwork, generates meditations for the day you actually had, and adds visualisation, a guided morning ritual and long-term pattern coaching."}},
+{"@type":"Question","name":"When does FORGE launch?","acceptedAnswer":{"@type":"Answer","text":"FORGE is pre-launch. It is in final device testing ahead of App Store review, launching on iOS first. Join early access on the Built Not Born community page to hear the moment it lands."}},
+{"@type":"Question","name":"Is FORGE free?","acceptedAnswer":{"@type":"Answer","text":"FORGE will be free to try when it launches on iOS. The full experience will be £7.99 per month; annual pricing will be announced at launch. The physical FORGE Journal is a separate, optional product at £14.99."}},
+{"@type":"Question","name":"Do I need the paper journal to use the app?","acceptedAnswer":{"@type":"Answer","text":"No. The app is a complete system on its own: type your check-in directly and everything works. The FORGE Journal is its own complete product too. If you choose to use both, you can scan handwritten pages and get coached from your own handwriting — that bridge is optional."}},
+{"@type":"Question","name":"Is my journal private?","acceptedAnswer":{"@type":"Answer","text":"Yes. FORGE is a private space with no feed, no followers and no social layer. Your entries are locked to your account, protected by row-level security, and never sold."}},
+{"@type":"Question","name":"Is FORGE coming to Android?","acceptedAnswer":{"@type":"Answer","text":"FORGE launches on iOS first. Android is planned. Join the Built Not Born list to hear when it lands."}}
+]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<canvas id="page-sparks" data-density="70000" data-always="true"></canvas>
+
+<!-- DESCENT RAIL -->
+<aside id="rail" aria-hidden="true">
+  <a class="stop" href="#pipeline">The System</a>
+  <div class="track"><i id="rail-fill"></i></div>
+  <a class="stop" href="#arsenal">The Arsenal</a>
+  <a class="stop" href="#compare">The Proof</a>
+  <a class="stop" href="#get-forge">Get It</a>
+</aside>
+
+<nav class="site-nav" id="nav">
+  <a href="index.html" class="brand"><span class="spark"></span><span class="brand-full">Built Not Born</span><span class="brand-abbr">BNB</span></a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="app.html">The App</a>
+      <a href="journal.html">The Journal</a>
+      <a href="tools.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+    </div>
+    <a href="community.html#waitlist" class="nav-cta" data-app-cta>Join Early Access</a>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="app.html">The App</a>
+  <a href="journal.html">The Journal</a>
+  <a href="tools.html">Tools</a>
+  <a href="about.html">About</a>
+  <a href="community.html">Community</a>
+</div>
+
+  <!-- HERO — the product demonstrating itself: handwriting → embers → the coach answers
+       (ported from the approved forge-hero concept). Full-bleed, outside #content. -->
+  <section class="app-hero" id="app-hero-section">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="ghost" aria-hidden="true">FORGE</div>
+    <div class="heat" aria-hidden="true"></div>
+
+    <div class="stack">
+      <p class="eyebrow fade">Forge · The App</p>
+      <h1 class="fade">The <em>AI journal app</em> for men.</h1>
+      <p class="sub fade">Type your daily check-in. Get coached back from your own words — not a template. Guided breathwork when the day gets heavy, and a meditation generated for the day you actually had. A complete system, no paper required.</p>
+
+      <div class="actions fade">
+        <a href="community.html#waitlist" class="btn-hero magnetic" data-app-cta>Join Early Access</a>
+        <p class="alt-line">or explore <a href="journal.html">the journal</a></p>
+        <p class="hero-note">Pre-launch · Final device testing before the App&nbsp;Store</p>
+      </div>
+
+      <div class="stage">
+        <div class="panel paper">
+          <span class="tag">Your page · Tuesday</span>
+          <div class="hand-wrap">
+            <span class="hand">Snapped at him again today. Third time this week.</span>
+            <span class="pen" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="panel coach">
+          <span class="tag gold">Forge</span>
+          <p class="reply">Three times this week — and each one after a short night. That isn't temper. That's sleep.</p>
+        </div>
+      </div>
+
+      <button class="replay" type="button">Replay</button>
+    </div>
+  </section>
+
+<div id="content">
+
+  <!-- THE PIPELINE -->
+  <section class="section tight reveal center" id="pipeline">
+    <p class="eyebrow">One System</p>
+    <h2>Write. Reflect. <em>Rebuild.</em></h2>
+    <p class="lead">However you write — typed into the app or handwritten in the FORGE Journal — you enter the same reflection system.</p>
+    <div class="pipeline-rail" aria-hidden="true">
+      <span class="pr-step" data-stage="write">Write</span>
+      <span class="pr-arrow">→</span>
+      <span class="pr-step" data-stage="reflect">Reflect</span>
+      <span class="pr-arrow">→</span>
+      <span class="pr-step" data-stage="rebuild">Rebuild</span>
+    </div>
+    <div class="stat-grid slim" aria-label="FORGE in numbers">
+      <div class="stat"><span class="num">2 min</span><span class="lbl">a day</span></div>
+      <div class="stat"><span class="num">Built</span><span class="lbl">over time</span></div>
+    </div>
+  </section>
+
+  <!-- STAGE: WRITE -->
+  <section class="section reveal pipeline-stage" data-stage="write" id="write">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Stage One · The Check-In</p>
+        <h2>Eight steps.<br><em>Two minutes.</em></h2>
+        <p class="lead">Mood, energy, habits, pressure, and what actually happened. The daily check-in is the raw material everything else is forged from — and it takes less time than making coffee.</p>
+        <div class="feature-list">
+          <div class="item"><span class="ico">i</span><div><h3>Name what you're carrying</h3><p>Six core emotions, thirty-five specifics, and room for your own words. Name it before it decides the day for you.</p></div></div>
+          <div class="item"><span class="ico">ii</span><div><h3>Type it, or scan it</h3><p>Type straight into the app — or, if you keep the FORGE Journal, scan the handwritten page. Both land in the same place. Neither is required for the other.</p></div></div>
+          <div class="item"><span class="ico">iii</span><div><h3>Private by design</h3><p>No feed. No followers. No performance. Just you and the work, locked to your account.</p></div></div>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone tilt" data-tilt-max="9"><div class="screen">
+          <span class="s-brand">FORGE</span>
+          <span class="s-day">Day 14<small>The day is yours to forge</small></span>
+          <span class="s-quote">"Discipline is choosing what you want most over what you want now."</span>
+          <span class="s-btn">BEGIN TODAY'S CHECK-IN</span>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAGE: REFLECT — headline differentiator #1 -->
+  <section class="section reveal pipeline-stage center" data-stage="reflect" id="reflect">
+    <p class="eyebrow">Stage Two · AI Reflection &amp; Coach</p>
+    <h2 style="margin-left:auto;margin-right:auto">Feedback built<br>from <em>your life.</em><br>Not a template.</h2>
+    <p class="lead" style="margin:0 auto">Every other app says the same thing to ten million people. FORGE reads your actual check-in — your mood, your energy, the words you wrote — and answers you like a coach who's been paying attention. You can reply. It remembers. Tomorrow it knows what you said today.</p>
+    <div class="quote-card">
+      <p class="tag">FORGE Reflection · Day 14</p>
+      <p class="q" id="ai-quote">"Third time this week you've written 'tired' and skipped the gym after a late finish. The problem isn't the gym. It's what happens at 9pm. Fix the evening and the morning fixes itself."</p>
+      <p class="author">Generated from your own check-in</p>
+    </div>
+    <p class="lead" style="margin:2.5rem auto 0">That's the daily reflection. The Coach goes wider, reading weeks of your history to surface the trend you'd never catch alone. The stress that always spikes on the same day. The habit quietly slipping. The win you keep underrating. The longer you use it, the sharper it gets.</p>
+  </section>
+
+  <!-- INTERACTIVE DEMO -->
+  <section class="section tight reveal center" id="demo">
+    <p class="eyebrow">Watch It Work</p>
+    <h2>Your words go in.<br><em>Your coach</em> comes back.</h2>
+    <div class="demo-stage">
+      <div class="paper" id="demo-paper">
+        <p class="p-head">Daily Check-In</p>
+        <p class="ink" id="demo-ink" aria-label="Check-in entry: Slept badly again. Skipped the gym. Big pitch tomorrow and I can't switch off at night."></p>
+        <div class="scanline"></div>
+      </div>
+      <div class="demo-arrow" aria-hidden="true">
+        <span class="a-line"></span>
+        <span class="a-lbl" id="demo-stage-lbl">Scan</span>
+        <span class="a-line"></span>
+      </div>
+      <div class="appcard">
+        <p class="a-head">FORGE Reflection</p>
+        <p class="a-body"><span id="demo-out"></span><span class="caret" id="demo-caret" style="visibility:hidden"></span></p>
+        <p class="a-foot">Written from your own words</p>
+      </div>
+    </div>
+    <button class="demo-replay" id="demo-replay" type="button">Run it again</button>
+    <p class="demo-note">Shown here from a scanned FORGE Journal page — an entry typed straight into the app lands in exactly the same place.</p>
+  </section>
+
+  <!-- STAGE: REBUILD — breathwork (differentiator #2) -->
+  <section class="section reveal pipeline-stage" data-stage="rebuild" id="breathwork">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Stage Three · Breathwork</p>
+        <h2>Regulate in minutes.<br><em>Anywhere.</em></h2>
+        <p class="lead">Guided breathing patterns, structured and built into the app — not a link out to someone else's video. Three paces, hold timers, and a Combo Stack for the full reset when the day has been heavy.</p>
+        <div class="feature-list">
+          <div class="item"><span class="ico">i</span><div><h3>Box, calm, and power patterns</h3><p>Pick the pattern for the state you're in — pre-pitch nerves, post-conflict heat, or a racing head at midnight.</p></div></div>
+          <div class="item"><span class="ico">ii</span><div><h3>The Combo Stack</h3><p>Chained patterns for a complete reset. Follow the metal, come back level.</p></div></div>
+        </div>
+      </div>
+      <div class="visual-panel tilt" data-tilt-max="6">
+        <!-- TODO: replace placeholder with real breathwork screen recording/screenshot -->
+        <img src="assets/img/breathwork.svg" alt="Placeholder visual of the FORGE breathwork screen: a glowing molten orb inside concentric guide rings, labelled box breathing, in for four" />
+      </div>
+    </div>
+  </section>
+
+  <!-- BREATHING EXERCISE -->
+  <section class="section tight reveal breath" id="breath">
+    <p class="eyebrow">Try It Right Here</p>
+    <h2 style="margin-left:auto;margin-right:auto">One breath cycle.<br><em>On the house.</em></h2>
+    <p class="lead" style="margin:0 auto">This is box breathing, one of the patterns inside FORGE. Press begin, follow the metal.</p>
+    <div class="b-stage">
+      <div class="b-circle">
+        <span class="b-ring"></span><span class="b-ring r2"></span><span class="b-ring r3"></span>
+        <div class="b-core" id="b-core"></div>
+        <span class="b-phase" id="b-phase">Ready</span>
+        <span class="b-count" id="b-count"></span>
+      </div>
+      <div class="b-controls">
+        <button class="btn-primary magnetic" id="b-start" type="button">Begin breathing</button>
+      </div>
+      <p class="b-note">In the app: three paces, hold timers, and the full Combo Stack.</p>
+    </div>
+  </section>
+
+  <!-- STAGE: REBUILD — meditation (differentiator #3) -->
+  <section class="section reveal pipeline-stage" data-stage="rebuild" id="meditation">
+    <div class="split">
+      <div class="visual-panel tilt" data-tilt-max="6">
+        <!-- TODO: replace placeholder with real meditation screen recording/screenshot -->
+        <img src="assets/img/meditation.svg" alt="Placeholder visual of a FORGE personalised meditation: a molten waveform generated from the day's mood, words and energy" />
+      </div>
+      <div>
+        <p class="eyebrow">Stage Three · Personalised Meditation</p>
+        <h2>Generated for the day<br><em>you actually had.</em></h2>
+        <p class="lead">No library of stock tracks recorded for no one in particular. FORGE writes tonight's meditation from your mood, your energy and your own words — then voices it and plays it. If the day was pressure, the meditation knows. If the day was a win, it knows that too.</p>
+        <div class="feature-list">
+          <div class="item"><span class="ico">i</span><div><h3>Built from the check-in</h3><p>Whatever you wrote today is the raw material. The session meets you where the day left you.</p></div></div>
+          <div class="item"><span class="ico">ii</span><div><h3>Voiced and played</h3><p>Not a script to read — a session to close your eyes to. Generated, spoken, done.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- THE ARSENAL — supporting UX detail, below the pipeline -->
+  <section class="arsenal" id="arsenal" aria-label="The FORGE toolkit">
+    <div class="ars-track" id="ars-track">
+      <div class="ars-pin">
+        <div class="ars-head">
+          <p class="eyebrow">The Arsenal</p>
+          <h2>Nine tools.<br>One <em>direction.</em></h2>
+          <p class="ars-sub">The pipeline is the spine. These are the tools around it — everything that keeps the daily strikes landing.</p>
+        </div>
+        <div class="ars-row" id="ars-row">
+          <article class="tool" data-n="i"><p class="t-tag">Daily</p><h3>The Check-In</h3><p>Eight steps, two minutes. Mood, energy, habits, pressure, and what actually happened. The raw material every other tool is forged from.</p></article>
+          <article class="tool" data-n="ii"><p class="t-tag">Daily</p><h3>Emotion Wheel</h3><p>Six cores, thirty-five specifics, and room for your own words. Name what you're carrying before it decides the day for you.</p></article>
+          <article class="tool" data-n="iii"><p class="t-tag">AI</p><h3>FORGE Reflection</h3><p>A daily reflection written from your own check-in, never a template. Reply to it. It remembers what you said.</p></article>
+          <article class="tool" data-n="iv"><p class="t-tag">AI</p><h3>The Coach</h3><p>Reads weeks of your history and surfaces the trend you'd never catch alone. The stress that spikes on the same day. The habit quietly slipping.</p></article>
+          <article class="tool" data-n="v"><p class="t-tag">Toolkit</p><h3>Meditation</h3><p>Generated for the day you actually had, from your mood, your energy and your words. Then voiced and played. No library of generic tracks.</p></article>
+          <article class="tool" data-n="vi"><p class="t-tag">Toolkit</p><h3>Breathwork</h3><p>Guided patterns with three paces, hold timers, and a Combo Stack for the full reset. Regulate in minutes, anywhere.</p></article>
+          <article class="tool" data-n="vii"><p class="t-tag">Toolkit</p><h3>Visualisation</h3><p>Guided imagery built around the man you're becoming. See the standard before you go and build it.</p></article>
+          <article class="tool" data-n="viii"><p class="t-tag">Morning</p><h3>F.I.R.E. Stack</h3><p>A four-stage guided morning ritual. Focus, intention, resilience, execution — claimed before the world gets a say in your day.</p></article>
+          <article class="tool" data-n="ix"><p class="t-tag">Long game</p><h3>Progress</h3><p>Streaks, weekly reviews, monthly milestones, the Wheel of Life, and a 90-day reflection. Watch the strikes compound.</p></article>
+        </div>
+        <div class="ars-progress"><i id="ars-fill"></i></div>
+        <p class="ars-hint">Keep scrolling</p>
+      </div>
+    </div>
+  </section>
+
+  <div style="position:relative;z-index:10;background:var(--void)">
+
+  <!-- COMPARISON -->
+  <section class="section reveal compare-wrap" id="compare">
+    <h2 style="margin-left:auto;margin-right:auto;text-align:center">Nothing else <em>closes the loop.</em></h2>
+    <p class="lead" style="margin:0 auto;text-align:center">Apps talk at you. A blank page can’t answer back. FORGE is built so the writing and the coaching are the same conversation.</p>
+    <div class="cmp" role="table" aria-label="FORGE compared with journaling apps and a blank notebook">
+      <div class="cmp-row h" role="row"><div role="columnheader"></div><div class="forge-col" role="columnheader">FORGE</div><div role="columnheader">Journal apps</div><div role="columnheader">A blank notebook</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Coaching written from your own words</div><div class="forge-col" role="cell"><span class="yes">✓</span></div><div role="cell"><span class="no">✕</span></div><div role="cell"><span class="no">✕</span></div></div>
+      <div class="cmp-row" role="row"><div role="cell">Remembers you tomorrow</div><div class="forge-col" role="cell"><span class="yes">✓</span></div><div role="cell"><span class="no">✕</span></div><div role="cell"><span class="no">✕</span></div></div>
+      <div class="cmp-row" role="row"><div role="cell">Guided breathwork built in</div><div class="forge-col" role="cell"><span class="yes">✓</span></div><div role="cell"><span class="no">✕</span></div><div role="cell"><span class="no">✕</span></div></div>
+      <div class="cmp-row" role="row"><div role="cell">Meditation generated for your day</div><div class="forge-col" role="cell"><span class="yes">✓</span></div><div role="cell"><span class="no">✕</span></div><div role="cell"><span class="no">✕</span></div></div>
+      <div class="cmp-row" role="row"><div role="cell">Pattern recognition over weeks</div><div class="forge-col" role="cell"><span class="yes">✓</span></div><div role="cell"><span class="no">✕</span></div><div role="cell"><span class="no">✕</span></div></div>
+      <div class="cmp-row" role="row"><div role="cell">Can read your handwriting (optional bridge)</div><div class="forge-col" role="cell"><span class="yes">✓</span></div><div role="cell"><span class="no">✕</span></div><div role="cell"><span class="no">✕</span></div></div>
+      <div class="cmp-row" role="row"><div role="cell">No feed, no followers, fully private</div><div class="forge-col" role="cell"><span class="yes">✓</span></div><div role="cell"><span class="no">✕</span></div><div class="forge-col" role="cell" style="background:none"><span class="yes">✓</span></div></div>
+    </div>
+    <p class="lead" style="margin:2rem auto 0;text-align:center">The FORGE Journal isn’t in this table. It’s the other half of the same philosophy, doing a different job — and it does that job better than any app can.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section tight reveal center" id="screens">
+    <p class="eyebrow">Inside The App</p>
+    <h2>Forged in <em>ember and gold.</em></h2>
+    <div class="gallery"
+      data-src="assets/screenshots/app/app-{n}.png"
+      data-count="4"
+      data-label="FORGE app"
+      data-alts='["The FORGE Space introduction, explaining that what you write stays private","The Reflect step of the daily check-in, with a written entry about training","The FORGE Reflection, where the AI coach responds to that entry","The Toolkit grid showing the six mental tools"]'>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section reveal faq" id="faq">
+    <h2 style="margin-left:auto;margin-right:auto;text-align:center">Asked <em>honestly.</em><br>Answered the same way.</h2>
+    <div class="qa"><button type="button" aria-expanded="false">What is the FORGE app?<span class="qi"></span></button>
+      <div class="ans"><p>FORGE is a self-development app for men built around a daily check-in. It writes a personal AI reflection from your own words, includes guided breathwork, generates meditations for the day you actually had, and adds visualisation, a guided morning ritual and long-term pattern coaching.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">When does FORGE launch?<span class="qi"></span></button>
+      <div class="ans"><p>FORGE is pre-launch. It's in final device testing ahead of App Store review, launching on iOS first. Join early access on the <a href="community.html" style="color:var(--ember)">community page</a> and you'll hear the moment it lands.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Is FORGE free?<span class="qi"></span></button>
+      <div class="ans"><p>FORGE will be free to try when it launches on iOS. The full experience will be £7.99 per month; annual pricing will be announced at launch. The physical FORGE Journal is a separate, optional product at £14.99.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Do I need the paper journal to use the app?<span class="qi"></span></button>
+      <div class="ans"><p>No. The app is a complete system on its own — type your check-in directly and everything works. The FORGE Journal is its own complete product too. If you choose to use both, you can scan handwritten pages and get coached from your own handwriting. The bridge is optional. The philosophy isn't.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Is my journal private?<span class="qi"></span></button>
+      <div class="ans"><p>Yes. FORGE is a private space with no feed, no followers and no social layer. Your entries are locked to your account, protected by row-level security, and never sold.</p></div></div>
+    <div class="qa"><button type="button" aria-expanded="false">Is FORGE coming to Android?<span class="qi"></span></button>
+      <div class="ans"><p>FORGE launches on iOS first. Android is planned. Join the Built Not Born list and you'll hear when it lands.</p></div></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section reveal cta-panel" id="get-forge">
+    <div class="dl-inner">
+      <p class="eyebrow">The App</p>
+      <h2>Be first through <em>the fire.</em></h2>
+      <p class="dl-sub">FORGE is finishing final device testing before App Store review. Early access members get first word — and first access — the day it clears.</p>
+      <p class="dl-price"><strong>Free to try at launch.</strong> Then £7.99/month · annual pricing announced at launch.</p>
+      <div class="dl-main">
+        <a href="community.html#waitlist" class="btn-primary magnetic" data-app-cta>Join Early Access</a>
+      </div>
+      <!-- Store badge switches to a live App Store link via site.js when APP_LIVE=true.
+           TODO: real App Store URL lives in assets/js/site.js (APP_STORE_URL). -->
+      <div>
+        <span class="store-note" data-store-slot>
+          <span class="ico">&#63743;</span>
+          <span class="st-text"><small>Pending approval on the</small><span>App Store</span></span>
+        </span>
+      </div>
+    </div>
+    <p class="alt-line" style="margin-top:2.5rem">Want the ritual of pen on paper instead? <a href="journal.html">Or explore the FORGE Journal &rarr;</a></p>
+  </section>
+
+  </div>
+
+<footer>
+  <div class="f-ghost" aria-hidden="true">Built Not Born</div>
+  <p class="f-brand">Built Not Born</p>
+  <p class="f-tag">Steel is forged with fire. So are you.</p>
+  <div class="f-links">
+    <a href="index.html">Home</a>
+    <a href="app.html">The App</a>
+    <a href="journal.html">The Journal</a>
+    <a href="tools.html">Tools</a>
+    <a href="about.html">About</a>
+    <a href="community.html">Community</a>
+    <a href="mailto:admin@builtnotborn.uk">admin@builtnotborn.uk</a>
+    <a href="https://forge-privacy.netlify.app">Privacy</a>
+    <a href="https://www.instagram.com/forge.builtnotborn">Instagram</a>
+  </div>
+  <p class="f-copy">© 2026 Built Not Born Ltd · Created by Joe Hilton</p>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/app-hero.js" defer></script>
+</body>
+</html>
