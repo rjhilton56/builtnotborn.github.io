@@ -570,6 +570,8 @@ body.menu-open #mobile-menu{transform:translateY(0)}
   border-radius:3px;text-decoration:none;border:1px solid rgba(244,240,232,0.2);transition:border-color 0.25s,color 0.25s;
   cursor:pointer;font-family:var(--font-body);will-change:transform}
 .btn-ghost:hover{border-color:var(--molten);color:var(--ember)}
+/* coming-soon labels reuse the ghost button look but must not light up on hover */
+.btn-ghost[aria-disabled="true"]:hover{border-color:rgba(244,240,232,0.2);color:var(--bone);transform:none;box-shadow:none}
 
 /* =====================================================
    QUOTE CARD — AI reflection sample
