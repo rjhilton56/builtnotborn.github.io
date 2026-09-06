@@ -143,10 +143,14 @@
     <h2>What should we <em>forge next?</em></h2>
     <p class="lead">One job you wish a small, sharp tool would do for you. If it's worth building, it gets built.</p>
     <form class="request-form" novalidate>
+      <input type="hidden" name="access_key" value="cc92d468-ca63-4c28-8e18-401920ae83b7" />
+      <input type="hidden" name="from_name" value="Built Not Born" />
+      <input type="hidden" name="subject" value="Built Not Born tool request" />
       <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
       <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
       <textarea name="request" rows="3" placeholder="The tool you want: one job, plainly put" aria-label="The tool you want built" required></textarea>
       <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" aria-hidden="true" />
       <button class="btn-primary magnetic" type="submit">Send it in</button>
     </form>
     <p class="form-msg" role="status" aria-live="polite"></p>

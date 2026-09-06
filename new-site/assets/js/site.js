@@ -27,10 +27,10 @@
      While an endpoint is empty its forms stay disabled and
      say so honestly — no fake success states.
      ===================================================== */
-  // TODO: paste the waitlist form endpoint here (Kit / Formspree / Netlify)
-  const WAITLIST_ENDPOINT = '';
-  // TODO: paste the "request a tool" form endpoint here
-  const REQUEST_ENDPOINT = '';
+  // Web3Forms: one shared endpoint; the account is identified by access_key in the body.
+  const WAITLIST_ENDPOINT = 'https://api.web3forms.com/submit';
+  const REQUEST_ENDPOINT = 'https://api.web3forms.com/submit';
+  const FORM_ACCESS_KEY = 'cc92d468-ca63-4c28-8e18-401920ae83b7';
   const CONTACT_EMAIL = 'admin@builtnotborn.uk';
 
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -385,9 +385,12 @@
     }
     form.addEventListener('submit', async e => {
       e.preventDefault();
-      /* honeypot: bots fill it, humans never see it */
-      const hp = form.querySelector('.hp-field');
-      if (hp && hp.value) return;
+      /* honeypots: bots fill them, humans never see them.
+         Text field (name=website) and Web3Forms' botcheck checkbox. */
+      const tripped = [...form.querySelectorAll('.hp-field')].some(el =>
+        el.type === 'checkbox' ? el.checked : !!el.value
+      );
+      if (tripped) return;
       /* inline validation */
       let firstBad = null;
       form.querySelectorAll('input:not(.hp-field), textarea').forEach(el => {
@@ -403,9 +406,11 @@
       btn.textContent = 'Sending…';
       setMsg('');
       try {
+        const formData = new FormData(form);
+        if (!formData.has('access_key')) formData.append('access_key', FORM_ACCESS_KEY);
         const res = await fetch(endpoint, {
           method: 'POST',
-          body: new FormData(form),
+          body: formData,
           headers: { 'Accept': 'application/json' }
         });
         if (!res.ok) throw new Error('HTTP ' + res.status);
