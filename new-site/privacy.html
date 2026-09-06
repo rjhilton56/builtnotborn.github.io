@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privacy Policy · Built Not Born</title>
+<title>FORGE Privacy Policy · Built Not Born</title>
 <meta name="description" content="How the FORGE app and the Built Not Born website handle your data: what is collected, where it goes, how long it is kept and how to delete it." />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="theme-color" content="#0A0A0B" />
 <link rel="canonical" href="https://www.builtnotborn.uk/privacy.html" />
 <meta property="og:site_name" content="Built Not Born" />
-<meta property="og:title" content="Privacy Policy · Built Not Born" />
+<meta property="og:title" content="FORGE Privacy Policy · Built Not Born" />
 <meta property="og:description" content="How the FORGE app and the Built Not Born website handle your data." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.builtnotborn.uk/privacy.html" />
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="The FORGE anvil, dark stone laced with molten gold" />
 <meta property="og:locale" content="en_GB" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Privacy Policy · Built Not Born" />
+<meta name="twitter:title" content="FORGE Privacy Policy · Built Not Born" />
 <meta name="twitter:description" content="How the FORGE app and the Built Not Born website handle your data." />
 <meta name="twitter:image" content="https://www.builtnotborn.uk/assets/img/og/og-about.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,73 +60,174 @@
 
 <div id="content">
 
-  <!-- ============================================================
-       PRIVACY POLICY — page shell. Policy content to follow.
-       Structure: page-hero, then one .section per policy heading.
-       Placeholder text is marked in square brackets.
-       ============================================================ -->
-
   <header class="page-hero" id="top">
     <p class="eyebrow">Built Not Born · FORGE</p>
-    <h1>Privacy <em>Policy</em></h1>
-    <p class="sub">[One-sentence summary of what this policy covers: the FORGE app and the builtnotborn.uk website.]</p>
-    <div class="actions">
-      <p class="hero-note">Last updated · [Day Month Year]</p>
-    </div>
+    <h1>FORGE Privacy <em>Policy</em></h1>
+    <p class="sub">Developer: Joe Hilton. Contact: admin@builtnotborn.uk</p>
+    <p class="hero-note">Last updated · September 2026</p>
   </header>
 
-  <!-- SECTION BLOCK: H2 + body paragraphs. Repeat per policy heading. -->
-  <section class="section tight reveal prose" id="section-one">
-    <h2>[Section heading]</h2>
-    <p class="lead">[Body paragraph. Uses .lead, the site's standard body copy style: 1.05rem, weight 300, 60ch measure.]</p>
-    <p class="lead">[Second paragraph in the same section.]</p>
+  <section class="section tight prose reveal" id="overview">
+    <h2>Overview</h2>
+    <p class="lead">FORGE is a personal development and journaling application for iOS, developed by Joe Hilton. This policy explains what data FORGE collects, where it goes, who processes it, and what control you have over it.</p>
+    <p class="lead">FORGE is built around private writing. Your journal content is never sold, never used for advertising, and never used to train AI models. It is processed only to deliver the features described below.</p>
+    <p class="lead">By using FORGE you agree to the collection and use of information as set out in this policy.</p>
   </section>
 
-  <!-- SECTION BLOCK with an H3 sub-heading and a list. -->
-  <section class="section tight reveal prose" id="section-two">
-    <h2>[Section heading with sub-parts]</h2>
-    <p class="lead">[Intro paragraph.]</p>
-    <h3>[Sub-heading]</h3>
-    <p class="lead">[Paragraph under the sub-heading.]</p>
-    <ul>
-      <li>[List item one]</li>
-      <li>[List item two, which runs long enough to wrap onto a second line so the hanging marker can be checked against the indent]</li>
-      <li>[List item three, with a nested list]
-        <ul>
-          <li>[Nested item one]</li>
-          <li>[Nested item two]</li>
-        </ul>
-      </li>
-    </ul>
-    <h3>[Sub-heading with an ordered list]</h3>
-    <p class="lead">[Paragraph introducing a numbered sequence.]</p>
-    <ol>
-      <li>[Step one]</li>
-      <li>[Step two, long enough to wrap onto a second line and show the numeral hanging clear of the text block]</li>
-      <li>[Step three, with a nested sequence]
-        <ol>
-          <li>[Nested step one]</li>
-          <li>[Nested step two]</li>
-        </ol>
-      </li>
-    </ol>
-  </section>
+  <section class="section tight prose reveal" id="what-forge-collects">
+    <h2>What FORGE collects</h2>
 
-  <!-- SECTION BLOCK with a two-column data table. -->
-  <section class="section tight reveal prose" id="section-three">
-    <h2>[Section heading with a table]</h2>
-    <p class="lead">[Intro paragraph.]</p>
-    <div class="cmp cmp-plain" role="table" aria-label="[Table description]">
-      <div class="cmp-row h" role="row"><div role="columnheader">[Label column]</div><div role="columnheader">[Value column]</div></div>
-      <div class="cmp-row" role="row"><div role="cell">[Row label]</div><div role="cell">[Value text, which can run to a full sentence or two and wrap onto more than one line without breaking the row.]</div></div>
-      <div class="cmp-row" role="row"><div role="cell">[Row label]</div><div role="cell">[Value]</div></div>
+    <h3>Account data</h3>
+    <div class="cmp cmp-plain" role="table" aria-label="Account data">
+      <div class="cmp-row h" role="row"><div role="columnheader">Data</div><div role="columnheader">What it is</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Email address</div><div role="cell">Provided at sign-up. Used for authentication, account recovery and support.</div></div>
     </div>
+    <p class="lead">Passwords are handled entirely by Supabase Auth and are never stored in plain text or visible to the developer.</p>
+
+    <h3>Journal and check-in data</h3>
+    <p class="lead">Everything you write or record in the app is stored against your account:</p>
+    <div class="cmp cmp-plain" role="table" aria-label="Journal and check-in data">
+      <div class="cmp-row h" role="row"><div role="columnheader">Data</div><div role="columnheader">What it is</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Weekly reviews</div><div role="cell">Your win, struggle, lesson and focus for the following week</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Monthly milestones</div><div role="cell">Biggest win, growth, key habit and intention</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Wheel of Life</div><div role="cell">Your scores across life areas, and any generated insight</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Grounding entries</div><div role="cell">The five-senses grounding exercise responses</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Named emotions</div><div role="cell">Emotions logged and what sits beneath them</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Perspective shifts</div><div role="cell">Prompt and response pairs</div></div>
+      <div class="cmp-row" role="row"><div role="cell">90-day reflections</div><div role="cell">Your written responses to the long-form reflection prompts</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Values entries</div><div role="cell">Your responses to values prompts</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Milestone badges</div><div role="cell">Which milestones you have reached and when you viewed them</div></div>
+    </div>
+    <p class="lead"><strong>Daily check-in.</strong> Mood and emotion selections, energy level, stress level, water intake, habit completions, today's win, tomorrow's priority, and your written reflection.</p>
+    <p class="lead"><strong>Written reflections.</strong> Free-text entries from the daily check-in and the reflection reply field.</p>
+    <p class="lead"><strong>Strikes.</strong> Timed freewriting sessions, including the full text you write, the prompt used, duration and word count.</p>
+    <p class="lead"><strong>Session records.</strong> Which breathwork, meditation or visualisation sessions you completed, and for how long.</p>
+    <p class="lead"><strong>Audio usage.</strong> Minutes of generated audio used per day, to enforce fair-use limits.</p>
+
+    <h3>Profile and identity data</h3>
+    <p class="lead">Optional fields you set in your profile: your name, vision, motivation, core values, custom habit, morning routine, and the "who you are" and "who you are becoming" identity fields.</p>
+    <p class="lead">These are used to make AI responses more relevant to you. You can edit or clear them at any time.</p>
+
+    <h3>FORGE Space</h3>
+    <p class="lead">FORGE Space is a single free-text field you control. Whatever you write there is stored against your account and is included as context in AI requests, so that responses reflect what you have told the app about your situation. You can clear it at any time.</p>
+
+    <h3>Apple Health</h3>
+    <p class="lead">FORGE requests read-only access to your <strong>daily step count</strong>. No other Health data is read, and nothing is ever written back to Apple Health.</p>
+    <p class="lead">Your step count is displayed in the app and is <strong>stored against your account</strong> as part of your daily record, so that your history is complete across devices. It is not sent to any AI provider.</p>
+    <p class="lead">You can decline Health access, or revoke it later in iOS Settings, and the rest of the app works normally.</p>
+
+    <h3>Camera and photo library</h3>
+    <p class="lead">FORGE can scan a handwritten page from the FORGE Journal so that its contents become a check-in entry.</p>
+    <p class="lead">If you use this feature, the app requests access to your camera or photo library. The photograph is resized on your device, then sent through the FORGE backend to Anthropic, which reads the handwriting and returns the text.</p>
+    <p class="lead"><strong>The image is not stored on any server and is not saved to your account.</strong> It is held in memory for the duration of the request only. A resized copy remains in the app's temporary cache on your device and is removed by iOS when the cache is cleared or the app is deleted. Your original photograph is untouched.</p>
+    <p class="lead">If you never use the scan feature, no camera or photo access is requested.</p>
+
+    <h3>Notifications</h3>
+    <p class="lead">FORGE schedules daily reminders <strong>locally on your device</strong>. Your chosen reminder time is stored against your account so it survives a reinstall. No push notification service is used, and no notification content leaves your device.</p>
+
+    <h3>What FORGE does not collect</h3>
+    <p class="lead">FORGE does not collect location data, contacts, browsing history, advertising identifiers, or microphone audio. FORGE contains no analytics, no crash reporting, no telemetry and no tracking of any kind.</p>
   </section>
 
-  <!-- CONTACT BLOCK: closes the policy. -->
-  <section class="section tight reveal prose" id="contact">
-    <h2>[Contact heading]</h2>
-    <p class="lead">[How to reach Built Not Born about this policy.] <a href="mailto:admin@builtnotborn.uk">admin@builtnotborn.uk</a></p>
+  <section class="section tight prose reveal" id="wellbeing-flagging">
+    <h2>Wellbeing flagging</h2>
+    <p class="lead">You should know about one automated process.</p>
+    <p class="lead">When you submit free text to FORGE, the backend scans it for language indicating that you may be in serious distress or at risk of harm. This runs automatically on your written reflections and FORGE Space content.</p>
+    <p class="lead">If that scan is triggered:</p>
+    <ul>
+      <li>FORGE adjusts its response to be appropriate to the situation, rather than replying as a coach would to an ordinary entry.</li>
+      <li>A record is stored containing a severity rating, the first 1,000 characters of the text that triggered it, and the date.</li>
+      <li>In the most serious cases, the free-text context you have written is withheld from the AI request rather than passed along.</li>
+    </ul>
+    <p class="lead">This exists as a safety measure, so that the app does not respond inappropriately to someone in crisis. The record is stored against your account in the same database as your other data, and is deleted when you delete your account.</p>
+    <p class="lead">FORGE is not a medical or crisis service, and this feature is not monitoring in real time. If you are struggling, please contact a doctor or a crisis line in your country.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="who-processes-your-data">
+    <h2>Who processes your data</h2>
+    <p class="lead">FORGE uses the following providers. Each receives only what it needs.</p>
+    <div class="cmp cmp-plain" role="table" aria-label="Providers and what each does">
+      <div class="cmp-row h" role="row"><div role="columnheader">Provider</div><div role="columnheader">What it does</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Supabase</div><div role="cell">Database and authentication</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Railway</div><div role="cell">Hosts the FORGE backend, which sits between the app and the AI providers</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Anthropic</div><div role="cell">Generates reflections, coaching, meditation and visualisation scripts, and reads scanned handwriting</div></div>
+      <div class="cmp-row" role="row"><div role="cell">async.com</div><div role="cell">Converts generated scripts into spoken audio</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Apple</div><div role="cell">HealthKit, on device</div></div>
+    </div>
+    <h3>What each provider receives</h3>
+    <p class="lead"><strong>Supabase.</strong> Your email address, and all journal, profile and check-in data described above.</p>
+    <p class="lead"><strong>Railway.</strong> Requests in transit, including your user id and email. Journal content passes through but is not stored there.</p>
+    <p class="lead"><strong>Anthropic.</strong> Journal and profile content as set out below. Your name and email are never sent.</p>
+    <p class="lead"><strong>async.com.</strong> The script text only. No account data, no journal entries.</p>
+    <p class="lead"><strong>Apple.</strong> Step count is read on your device. Apple receives nothing from FORGE.</p>
+    <p class="lead">Each provider has its own privacy policy:</p>
+    <ul>
+      <li>Supabase: <a href="https://supabase.com/privacy">https://supabase.com/privacy</a></li>
+      <li>Railway: <a href="https://railway.com/legal/privacy">https://railway.com/legal/privacy</a></li>
+      <li>Anthropic: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></li>
+    </ul>
+  </section>
+
+  <section class="section tight prose reveal" id="what-is-sent-to-the-ai">
+    <h2>What is sent to the AI</h2>
+    <p class="lead">This section is deliberately specific, because different features send different amounts.</p>
+    <p class="lead"><strong>Daily reflection.</strong> Your check-in for that day (energy, stress, emotions, habits, win, priority, gratitude, reflection), your profile and identity fields, your last seven days of entries for context, and your FORGE Space content.</p>
+    <p class="lead"><strong>FORGE Insight.</strong> Up to <strong>90 days of your entries</strong>, your last two weekly reviews, your full profile and identity fields, your streak and total check-in count, and your FORGE Space content. This is what allows Insight to comment on patterns across months.</p>
+    <p class="lead"><strong>Weekly insight.</strong> Your last seven days of entries, your core values, your custom habit and your FORGE Space content.</p>
+    <p class="lead"><strong>Meditation and visualisation scripts.</strong> Only derived summary values: a duration, a session type, a general energy descriptor, a stress rating, an emotional theme and a day-completion state. Your written entries are not sent.</p>
+    <p class="lead"><strong>Strikes.</strong> The full text of the freewriting session, up to 20,000 characters, plus the prompt used.</p>
+    <p class="lead"><strong>Journal page scanning.</strong> The photograph of the page, plus your FORGE Space content.</p>
+    <p class="lead">In every case, requests are made by the FORGE backend using its own credentials. <strong>Your name and email address are never passed to Anthropic or async.com.</strong></p>
+    <p class="lead">Anthropic processes this content to generate your response and does not use it to train its models. Anthropic's handling is governed by its commercial API terms.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="storage-and-security">
+    <h2>Storage and security</h2>
+    <p class="lead">Your data is stored on Supabase infrastructure. Connections between the app, the FORGE backend and all providers use TLS encryption.</p>
+    <p class="lead">Access to your records is restricted to your own authenticated account. The FORGE backend holds elevated credentials in order to write AI responses back to your record and to run account deletion. Those credentials are held server-side only and are never present in the app.</p>
+    <p class="lead">No system is perfectly secure, and absolute security cannot be guaranteed.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="retention-and-deletion">
+    <h2>Retention and deletion</h2>
+    <p class="lead">Your data is kept for as long as your account exists.</p>
+    <p class="lead"><strong>Deleting your account.</strong> In the app: Profile tab, then the Account section, then Delete Account. You will be asked to confirm. This permanently deletes your account and the data held against it, including journal entries, reflections, profile and identity fields, FORGE Space, weekly and monthly records, session history, wellbeing flags and usage records. It cannot be undone.</p>
+    <p class="lead">Audio generated for meditation or visualisation is written to your device's temporary cache and is not retained on any server.</p>
+    <p class="lead">If deletion fails for any reason, or you would rather it was done manually, email <strong><a href="mailto:admin@builtnotborn.uk">admin@builtnotborn.uk</a></strong> and it will be completed within 30 days.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="your-rights">
+    <h2>Your rights</h2>
+    <p class="lead">You can, at any time:</p>
+    <ul>
+      <li><strong>View</strong> everything you have written, in the app</li>
+      <li><strong>Edit or clear</strong> your profile, identity fields and FORGE Space</li>
+      <li><strong>Delete</strong> individual entries</li>
+      <li><strong>Delete</strong> your account and all associated data</li>
+      <li><strong>Revoke</strong> Health, camera or photo access in iOS Settings</li>
+    </ul>
+    <p class="lead">If you are in the UK or the European Economic Area, you have rights under UK GDPR and GDPR, including access, rectification, portability, restriction and erasure. To exercise any of these, or to request a copy of your data in a portable format, email <strong><a href="mailto:admin@builtnotborn.uk">admin@builtnotborn.uk</a></strong>.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="data-selling-and-advertising">
+    <h2>Data selling and advertising</h2>
+    <p class="lead">Your data is never sold, rented, traded or shared for commercial or advertising purposes. FORGE contains no advertising and no third-party trackers.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="children">
+    <h2>Children</h2>
+    <p class="lead">FORGE is not intended for anyone under 13 and is rated accordingly on the App Store. Personal information is not knowingly collected from children. If you believe a child has provided information through the app, email <strong><a href="mailto:admin@builtnotborn.uk">admin@builtnotborn.uk</a></strong> and it will be deleted promptly.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="changes-to-this-policy">
+    <h2>Changes to this policy</h2>
+    <p class="lead">This policy may be updated. When it is, the date at the top of this page changes. Significant changes affecting how your data is used will be signposted in the app where practicable.</p>
+  </section>
+
+  <section class="section tight prose reveal" id="contact">
+    <h2>Contact</h2>
+    <p class="lead"><strong>Joe Hilton</strong><br />Developer, FORGE<br /><strong><a href="mailto:admin@builtnotborn.uk">admin@builtnotborn.uk</a></strong></p>
+    <p class="lead">© 2026 Built Not Born. All rights reserved.</p>
   </section>
 
 </div>
@@ -143,7 +244,7 @@
     <a href="about.html">About</a>
     <a href="community.html">Community</a>
     <a href="mailto:admin@builtnotborn.uk">admin@builtnotborn.uk</a>
-    <a href="https://forge-privacy.netlify.app">Privacy</a>
+    <a href="/privacy.html">Privacy</a>
     <a href="https://www.instagram.com/forge.builtnotborn">Instagram</a>
   </div>
   <p class="f-copy">© 2026 Built Not Born Ltd · Created by Joe Hilton</p>
