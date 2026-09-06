@@ -56,6 +56,17 @@
       if (el.tagName === 'A') el.setAttribute('href', APP_STORE_URL);
     }
   });
+  // QR slot (app.html CTA panel): placeholder until live, then the App Store QR image
+  document.querySelectorAll('[data-qr-slot]').forEach(el => {
+    const img = el.querySelector('.qr-img');
+    const ph = el.querySelector('.qr-ph');
+    if (APP_LIVE && img && img.dataset.src) {
+      img.src = img.dataset.src;
+      img.hidden = false;
+      if (ph) ph.hidden = true;
+      el.classList.add('live');
+    }
+  });
 
   /* ============ NAV: scrolled state, active page, mobile menu ============ */
   const nav = document.querySelector('nav.site-nav');

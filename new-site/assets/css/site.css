@@ -712,6 +712,8 @@ body.menu-open #mobile-menu{transform:translateY(0)}
 .cmp-row.h > div{font-size:0.66rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ash);font-weight:500;padding:1.3rem 1.4rem}
 .cmp-row.h > div.forge-col{color:var(--ember)}
 .cmp-row > div.forge-col{background:rgba(200,132,30,0.06)}
+/* two-column variant (feature + one comparison + FORGE); the default above is three comparisons */
+.cmp.cmp-two .cmp-row{grid-template-columns:2.2fr 1fr 1fr}
 .cmp .yes{color:var(--ember);font-family:var(--font-display);font-size:1.15rem}
 .cmp .no{color:var(--ash-dim);font-size:1rem}
 
@@ -818,6 +820,13 @@ body.lightbox-open{overflow:hidden}
 .cta-panel .store-note .st-text{display:flex;flex-direction:column;line-height:1.15}
 .cta-panel .store-note .st-text small{font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--molten)}
 .cta-panel .store-note .st-text span{font-size:0.95rem;font-weight:600}
+/* QR slot: placeholder until launch, then the App Store QR. Desktop only. */
+.cta-panel .qr-slot{margin:2rem auto 0;width:132px;height:132px;display:flex;align-items:center;justify-content:center;
+  border:1px dashed rgba(200,132,30,0.4);border-radius:8px;background:rgba(20,18,16,0.6);position:relative;z-index:1}
+.cta-panel .qr-slot .qr-ph{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ash);text-align:center;padding:0 0.8rem;line-height:1.6}
+.cta-panel .qr-slot .qr-img{display:block;width:100%;height:100%;object-fit:contain;border-radius:6px;background:var(--bone)}
+.cta-panel .qr-slot.live{border-style:solid;border-color:rgba(200,132,30,0.25);background:var(--bone)}
+@media(max-width:899px){.cta-panel .qr-slot{display:none}}
 
 /* =====================================================
    FORMS — waitlist + request-a-tool. States are honest:
@@ -931,6 +940,7 @@ footer .f-copy{font-size:0.74rem;color:var(--ash-dim)}
   .arsenal .tool{scroll-snap-align:center}
   .arsenal .ars-progress,.arsenal .ars-hint{display:none}
   .cmp-row{grid-template-columns:1.6fr 1fr 1fr 1fr}
+  .cmp.cmp-two .cmp-row{grid-template-columns:1.6fr 1fr 1fr}
   .cmp-row > div{padding:0.9rem 0.6rem;font-size:0.74rem}
   .cmp-row.h > div{font-size:0.54rem;letter-spacing:0.14em;padding:1rem 0.5rem}
 }

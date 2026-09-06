@@ -40,11 +40,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/site.css" />
-<style>
-  /* this page compares two columns, not three; site.css still assumes three */
-  .cmp-row{grid-template-columns:2.2fr 1fr 1fr}
-  @media(max-width:860px){.cmp-row{grid-template-columns:1.6fr 1fr 1fr}}
-</style>
 </head>
 <body>
 
@@ -297,7 +292,7 @@
   <section class="section reveal compare-wrap" id="compare">
     <h2 style="margin-left:auto;margin-right:auto;text-align:center">Your writing goes in. <em>Coaching comes back.</em></h2>
     <p class="lead" style="margin:0 auto;text-align:center">A blank page records the day. FORGE answers it. Each check-in becomes context for the next one, so what comes back is built from your own record.</p>
-    <div class="cmp" role="table" aria-label="FORGE compared with a blank page">
+    <div class="cmp cmp-two" role="table" aria-label="FORGE compared with a blank page">
       <div class="cmp-row h" role="row"><div role="columnheader"></div><div role="columnheader">A blank page</div><div class="forge-col" role="columnheader">FORGE</div></div>
       <div class="cmp-row" role="row"><div role="cell">Records the day</div><div role="cell">Yes</div><div class="forge-col" role="cell">Yes</div></div>
       <div class="cmp-row" role="row"><div role="cell">Answers what you wrote</div><div role="cell">No</div><div class="forge-col" role="cell">Yes</div></div>
@@ -357,6 +352,12 @@
           <span class="ico">&#63743;</span>
           <span class="st-text"><small>Pending approval on the</small><span>App Store</span></span>
         </span>
+      </div>
+      <!-- QR slot: placeholder while APP_LIVE=false; site.js swaps in assets/img/qr-appstore.png when live.
+           Hidden under 900px, since a QR code is no use on the phone you are already holding. -->
+      <div class="qr-slot" data-qr-slot>
+        <span class="qr-ph">QR code at launch</span>
+        <img class="qr-img" data-src="assets/img/qr-appstore.png" alt="QR code linking to FORGE on the App Store" hidden />
       </div>
     </div>
     <p class="alt-line" style="margin-top:2.5rem">Want the ritual of pen on paper instead? <a href="journal.html">Or explore the FORGE Journal &rarr;</a></p>
