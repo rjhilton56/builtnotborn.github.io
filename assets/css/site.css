@@ -315,6 +315,8 @@ body.menu-open #mobile-menu{transform:translateY(0)}
   color:rgba(244,240,232,0.92)}
 .app-hero .reply span{opacity:0;transition:opacity 0.5s ease}
 .app-hero .reply span.on{opacity:1}
+/* caption pair under the demo reply: separate the first line from the reply above it */
+.app-hero .panel.coach .reply + .alt-line{margin-top:1rem}
 .app-hero .replay{position:relative;z-index:3;margin:2.2rem auto 0;display:block;
   background:none;border:0;cursor:pointer;font-family:inherit;
   font-size:0.66rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--ash);
@@ -379,8 +381,9 @@ body.menu-open #mobile-menu{transform:translateY(0)}
 .section h2 em{font-style:italic;color:var(--ember)}
 .section h3{color:var(--bone)}
 .section .lead{font-size:1.05rem;color:var(--bone-dim);font-weight:300;max-width:60ch;line-height:1.8}
-.pull{margin-top:2.5rem;font-family:var(--font-display);font-style:italic;
+.pull{margin-top:2.5rem;margin-bottom:2.5rem;font-family:var(--font-display);font-style:italic;
   font-size:clamp(1.3rem,3vw,2rem);line-height:1.4;color:var(--ember);max-width:34ch}
+.pull:last-child{margin-bottom:0}
 .center{text-align:center}
 .center h2,.center .lead,.center .eyebrow,.center .pull{margin-left:auto;margin-right:auto}
 .prose-center{text-align:center;max-width:880px}
@@ -701,7 +704,7 @@ body.menu-open #mobile-menu{transform:translateY(0)}
    THE ARSENAL — pinned horizontal tour of the toolkit
    ===================================================== */
 .arsenal{position:relative;z-index:10;background:var(--void)}
-.arsenal .ars-track{height:340vh;position:relative}
+.arsenal .ars-track{position:relative}  /* height is set by site.js from the row's overflow; static when nothing to pin */
 .arsenal .ars-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .arsenal .ars-head{padding:0 2.8rem;max-width:1300px;margin:0 auto 3rem;width:100%}
 .arsenal .ars-head h2{font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,5vw,3.6rem);
@@ -727,6 +730,11 @@ body.menu-open #mobile-menu{transform:translateY(0)}
   background:linear-gradient(90deg,var(--gold-deep),var(--ember));box-shadow:0 0 10px rgba(232,163,61,0.6)}
 .arsenal .ars-hint{text-align:center;margin-top:1rem;font-size:0.58rem;letter-spacing:0.3em;
   text-transform:uppercase;color:var(--ash-dim)}
+/* static layout: the row fits the viewport or motion is reduced, so there is nothing to pin */
+.arsenal.static .ars-track{height:auto}
+.arsenal.static .ars-pin{position:relative;height:auto;padding:6rem 0}
+.arsenal.static .ars-row{overflow-x:auto;width:100%;transform:none}
+.arsenal.static .ars-progress,.arsenal.static .ars-hint{display:none}
 
 /* =====================================================
    BREATHWORK DEMO

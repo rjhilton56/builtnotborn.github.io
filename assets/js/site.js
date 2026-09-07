@@ -486,21 +486,50 @@
      ===================================================== */
   const arsTrack = document.getElementById('ars-track');
   if (arsTrack) {
+    const arsSection = arsTrack.closest('.arsenal') || arsTrack.parentElement;
     const arsRow = document.getElementById('ars-row');
     const arsFill = document.getElementById('ars-fill');
+    // Pinned scroll distance per pixel of horizontal travel. 0.672 reproduces the
+    // old fixed 340vh track for the eleven-card row at 1400×900 (2160px for 3216px),
+    // and now scales with however many cards the row holds.
+    const ARS_SCROLL_RATIO = 0.672;
+    let arsMaxX = 0;
     function docTop(el) { return el.getBoundingClientRect().top + window.scrollY; }
+    // Layout pass (load + resize): measure the row, size the track, or go static
+    // when there is nothing to pin (row fits the viewport, mobile, reduced motion).
+    function arsLayout() {
+      arsRow.style.transform = '';
+      if (innerWidth <= 860) {
+        arsTrack.style.height = '';
+        arsSection.classList.remove('static');
+        arsMaxX = 0;
+        return;
+      }
+      const overflow = arsRow.scrollWidth - innerWidth;
+      if (overflow <= 0 || reduceMotion) {
+        arsSection.classList.add('static');
+        arsTrack.style.height = '';
+        if (arsFill) arsFill.style.width = '';
+        arsMaxX = 0;
+        return;
+      }
+      arsSection.classList.remove('static');
+      arsMaxX = overflow + 90;
+      arsTrack.style.height = Math.round(innerHeight + arsMaxX * ARS_SCROLL_RATIO) + 'px';
+      arsUpdate();
+    }
+    // Scroll pass: drive the row and the progress bar from the pinned distance.
     function arsUpdate() {
-      if (innerWidth <= 860 || reduceMotion) return;
+      if (arsMaxX === 0) return;
       const total = arsTrack.offsetHeight - innerHeight;
       if (total <= 0) return;
       const p = Math.max(0, Math.min(1, (scrollY - docTop(arsTrack)) / total));
-      const maxX = Math.max(0, arsRow.scrollWidth - innerWidth + 90);
-      arsRow.style.transform = 'translateX(' + (-p * maxX) + 'px)';
+      arsRow.style.transform = 'translateX(' + (-p * arsMaxX) + 'px)';
       if (arsFill) arsFill.style.width = (p * 100) + '%';
     }
     addEventListener('scroll', arsUpdate, { passive: true });
-    addEventListener('resize', arsUpdate);
-    arsUpdate();
+    addEventListener('resize', arsLayout);
+    arsLayout();
   }
 
   /* =====================================================
