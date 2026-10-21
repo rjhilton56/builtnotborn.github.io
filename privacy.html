@@ -108,10 +108,10 @@
     <p class="lead">Reflections, coaching, journal scans and guided session scripts are written by Anthropic's Claude AI through Anthropic's API. Anthropic does not use this data to train its models and keeps it only for a limited period under its commercial terms. What each feature sends:</p>
     <p class="lead"><strong>Daily reflection.</strong> That day's check-in, your first name, your profile, your goals, your last seven days of entries and your FORGE Space content.</p>
     <p class="lead"><strong>FORGE Insight.</strong> Up to 90 days of entries, your recent weekly reviews, your name and profile, your streak and your FORGE Space content. This is what lets Insight comment on patterns across months.</p>
-    <p class="lead"><strong>Meditation and visualisation.</strong> A duration, a session type, summary values for your energy, stress and mood and your FORGE Space content. The script that comes back is turned into audio by async.com, which receives the script only.</p>
+    <p class="lead"><strong>Meditation and visualisation.</strong> A duration, a session type, summary values for your energy, stress and mood and your FORGE Space content. The script that comes back is turned into audio by Speechify, which receives the script only. If Speechify is unavailable, async.com does this instead and also receives the script only.</p>
     <p class="lead"><strong>Strikes.</strong> The text of the writing session and the prompt used.</p>
     <p class="lead"><strong>Journal page scanning.</strong> The photograph of the page only.</p>
-    <p class="lead">Your email address and your step count are never sent to Anthropic or async.com. AI can be wrong. FORGE is not therapy or medical advice.</p>
+    <p class="lead">Your email address and your step count are never sent to Anthropic, Speechify or async.com. AI can be wrong. FORGE is not therapy or medical advice.</p>
   </section>
 
   <section class="section tight prose reveal" id="wellbeing-flagging">
@@ -138,7 +138,8 @@
       <div class="cmp-row" role="row"><div role="cell">Supabase</div><div role="cell">Database and login. Holds everything in your account. Hosted in Ireland (EU).</div></div>
       <div class="cmp-row" role="row"><div role="cell">Railway</div><div role="cell">Hosts the FORGE server, USA. Requests pass through it. Short-lived logs may include your user ID, never journal text.</div></div>
       <div class="cmp-row" role="row"><div role="cell">Anthropic</div><div role="cell">AI reflections, coaching, scans and scripts, USA. Receives what is listed under How FORGE uses AI.</div></div>
-      <div class="cmp-row" role="row"><div role="cell">async.com</div><div role="cell">Turns session scripts into audio, outside the UK. Receives the script only.</div></div>
+      <div class="cmp-row" role="row"><div role="cell">Speechify</div><div role="cell">Turns session scripts into audio, USA. Receives the script only. Does not train its models on customer data.</div></div>
+      <div class="cmp-row" role="row"><div role="cell">async.com</div><div role="cell">Backup for audio, used only if Speechify is unavailable, outside the UK. Receives the script only.</div></div>
       <div class="cmp-row" role="row"><div role="cell">RevenueCat</div><div role="cell">Manages subscriptions, USA. Receives a random account ID, purchase history and basic device details.</div></div>
       <div class="cmp-row" role="row"><div role="cell">Apple</div><div role="cell">App Store payments, Apple Health and notifications, under Apple's own privacy policy.</div></div>
     </div>
@@ -147,6 +148,7 @@
       <li>Supabase: <a href="https://supabase.com/privacy">supabase.com/privacy</a></li>
       <li>Railway: <a href="https://railway.com/legal/privacy">railway.com/legal/privacy</a></li>
       <li>Anthropic: <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></li>
+      <li>Speechify: <a href="https://speechify.com/privacy">speechify.com/privacy</a></li>
       <li>RevenueCat: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
     </ul>
   </section>
